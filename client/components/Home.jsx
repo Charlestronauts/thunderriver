@@ -3,20 +3,18 @@ Home = React.createClass({
 
   getMeteorData() {
     return {
-      things: Things.find({}).fetch()
+      things: Things.all()
     }
   },
 
   renderThings() {
     return this.data.things.map((thing) => {
-      return <div>{thing.createdAt}</div>
+      return <div>{thing.happyDate()}</div>
     })
   },
 
   addThing() {
-    Things.insert({
-      createdAt: Date.now()
-    })
+    Things.add(Date.now())
   },
 
   render() {
