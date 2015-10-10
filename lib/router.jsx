@@ -1,6 +1,6 @@
 FlowRouter.route('/', {
   action() {
-    ReactLayout.render(App, {content: <ProjectsView />})
+    ReactLayout.render(App, {})
   }
 })
 FlowRouter.route('/materials', {

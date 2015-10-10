@@ -2,9 +2,6 @@ ProjectsView = React.createClass({
 	mixins: [ReactMeteorData],
 
 	getMeteorData() {
-
-		let query = {};
-
 		var search = undefined;
  
     if (this.state.search.allow) {
