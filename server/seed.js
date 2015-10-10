@@ -9,7 +9,7 @@ if (Units.find().count() === 0) {
 
 if (Materials.find().count() === 0) {
   Materials.add({
-    _ids: "m1",
+    _id: "m1",
     name: "Punkin Fabric",
     cost: 123,
     quantity: 3,
@@ -18,7 +18,7 @@ if (Materials.find().count() === 0) {
   })
 
   Materials.add({
-    _ids: "m2",
+    _id: "m2",
     name: "Chuck Norris",
     cost: 8140.12,
     quantity: 0,
@@ -27,7 +27,7 @@ if (Materials.find().count() === 0) {
   })
 
   Materials.add({
-    _ids: "m3",
+    _id: "m3",
     name: "String",
     cost: 7135.23,
     quantity: 100,
@@ -36,7 +36,7 @@ if (Materials.find().count() === 0) {
   })
 
   Materials.add({
-    _ids: "m4",
+    _id: "m4",
     name: "Diamonds",
     cost: 543.23,
     quantity: 4732,
@@ -45,7 +45,7 @@ if (Materials.find().count() === 0) {
   })
 
   Materials.add({
-    _ids: "m5",
+    _id: "m5",
     name: "Rubys",
     cost: 23.5,
     quantity: 2345,
@@ -56,7 +56,7 @@ if (Materials.find().count() === 0) {
 
 if (Projects.find().count() === 0) {
   Projects.add({
-    _ids: "p1",
+    _id: "p1",
     name: "Fancy Necklace",
     description: "I lovez the necklaces, they are kute!!",
     timeEstimate: 5,
@@ -66,7 +66,7 @@ if (Projects.find().count() === 0) {
   })
 
   Projects.add({
-    _ids: "p2",
+    _id: "p2",
     name: "Punkin Pillow",
     description: "",
     timeEstimate: 4,
@@ -76,7 +76,7 @@ if (Projects.find().count() === 0) {
   })
 
   Projects.add({
-    _ids: "p3",
+    _id: "p3",
     name: "Pizza",
     description: "I like pizza better than Jimmy Johns, and so do you.",
     timeEstimate: 1,
@@ -86,7 +86,7 @@ if (Projects.find().count() === 0) {
   })
 
   Projects.add({
-    _ids: "p4",
+    _id: "p4",
     name: "Chocolate Looking Couch",
     description: "A couch that looks like chocolate, but don't try to eat it, it is not made of chocolate.",
     timeEstimate: 1,
@@ -96,7 +96,7 @@ if (Projects.find().count() === 0) {
   })
 
   Projects.add({
-    _ids: "p5",
+    _id: "p5",
     name: "Earings",
     description: "Those things you wear on your fingers",
     timeEstimate: 7,
@@ -107,7 +107,7 @@ if (Projects.find().count() === 0) {
   })
 
   Projects.add({
-    _ids: "p6",
+    _id: "p6",
     name: "Robot Chicken",
     description: "Yeah, duh.",
     timeEstimate: 234,
