@@ -7,9 +7,9 @@ ProjectItem = React.createClass({
             <image src={this.props.project.img} />
           </a>
           <div className="content">
-            <a className="header" href="#">Trying Cards</a>
+            <a className="header" href="#">{this.props.project.name}</a>
             <div className="meta">
-              Maybe tags go here, maybe.
+              {this.props.project.desc}
             </div>
           </div>
         </div>
