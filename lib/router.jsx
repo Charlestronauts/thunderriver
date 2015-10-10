@@ -3,8 +3,8 @@ FlowRouter.route('/', {
     ReactLayout.render(App, {content: <ProjectsList />})
   }
 })
-FlowRouter.route('/materialsProto/', {
+FlowRouter.route('/material/', {
   action() {
-    ReactLayout.render(MaterialsProto)
+    ReactLayout.render(App, {content: <MaterialList />})
   }
 })
