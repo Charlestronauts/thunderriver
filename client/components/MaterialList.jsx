@@ -18,7 +18,6 @@ MaterialList = React.createClass({
   render() {
     return (
       <div className="container materials">
-        <h2>Materials</h2>
         <div className="ui divided items">
           {this.renderMaterialItems()}
         </div>

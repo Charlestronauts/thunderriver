@@ -10,16 +10,22 @@ MaterialItem = React.createClass({
     }
     return (
       <div className="item">
-        <div className="ui image">
+        <div className="ui tiny image">
           <img src={this.props.item.image} />
         </div>
         <div className="content">
-          <a className="header">{this.props.item.name}</a>
-          <div className="meta">
-            {this.props.item.meta}
-          </div>
           <div className="description">
-            <p>{this.props.item.description}</p>
+            <div className="ui relaxed divided list">
+              <div className="item">
+                <strong>{this.props.item.name}</strong>
+              </div>
+              <div className="item">
+                ${this.props.item.cost}
+              </div>
+              <div className="item">
+                <strong>Quantity</strong> {this.props.item.quantity} {this.props.item.unit}
+              </div>
+            </div>
           </div>
           <div className="extra">
             <div className="ui right floated blue labeled icon button">
