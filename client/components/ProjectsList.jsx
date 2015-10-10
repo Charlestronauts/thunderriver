@@ -32,7 +32,7 @@ ProjectsList = React.createClass({
   render() {
     return (
       <div>
-        <button className='ui green labeled icon button addProject'
+        <button className='ui green labeled icon button'
                 style={style.addButton}
                 onClick={this.addHandler}>
           <i className='plus icon'></i>

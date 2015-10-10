@@ -116,7 +116,12 @@ Meteor.startup(function() {
       timeEstimate: 5,
       image: "http://images4.fanpop.com/image/photos/14700000/Monkeys-monkeys-14750729-1600-1200.jpg",
       difficulty: 1,
-      materialIds: ["m1", "m2", "m3", "m4"]
+      materialsUsed: {
+        "m1": 1,
+        "m2": 1,
+        "m3": 1,
+        "m4": 1
+      }
     })
 
     Projects.insert({
@@ -127,7 +132,10 @@ Meteor.startup(function() {
       timeEstimate: 4,
       image: "http://www.guygray.org/wp-content/uploads/2013/08/animals-monkeys-HD-Wallpapers.jpg",
       difficulty: 1,
-      materialIds: ["m2", "m5"]
+      materialsUsed: {
+        "m2": 1,
+        "m5": 1
+      }
     })
 
     Projects.insert({
@@ -138,7 +146,10 @@ Meteor.startup(function() {
       timeEstimate: 1,
       image: "",
       difficulty: 1,
-      materialIds: ["m1", "m5"]
+      materialsUsed: {
+        "m1": 1,
+        "m5": 1
+      }
     })
 
     Projects.insert({
@@ -149,7 +160,9 @@ Meteor.startup(function() {
       timeEstimate: 1,
       image: "http://images4.fanpop.com/image/photos/14700000/Lemurs-monkeys-14750770-1600-1200.jpg",
       difficulty: 3,
-      materialIds: ["m5"]
+      materialsUsed: {
+        "m5": 1
+      }
     })
 
     Projects.insert({
@@ -161,7 +174,7 @@ Meteor.startup(function() {
       image: "http://www.catherinenicole.com/wp-content/uploads/2011/05/earrings-angela-w1.jpg",
       difficulty: 2,
       // Empty material ids
-      materialIds: []
+      materialsUsed: {}
     })
 
     Projects.insert({
