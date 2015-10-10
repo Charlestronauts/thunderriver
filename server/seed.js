@@ -1,10 +1,10 @@
 if (Units.find().count() === 0) {
-  Units.add({name: 'SqFt'})
-  Units.add({name: 'Inches'})
-  Units.add({name: 'Meters'})
-  Units.add({name: 'Liters'})
-  Units.add({name: 'Quarts'})
-  Units.add({name: 'Gallons'})
+  Units.add({_id: "u1", name: 'SqFt'})
+  Units.add({_id: "u2", name: 'Inches'})
+  Units.add({_id: "u3", name: 'Meters'})
+  Units.add({_id: "u4", name: 'Liters'})
+  Units.add({_id: "u5", name: 'Quarts'})
+  Units.add({_id: "u6", name: 'Gallons'})
 }
 
 if (Materials.find().count() === 0) {
@@ -13,6 +13,7 @@ if (Materials.find().count() === 0) {
     name: "Punkin Fabric",
     cost: 123,
     quantity: 3,
+    unitId: "u1",
     image: "http://www.eonline.com/eol_images/Entire_Site/20080715/300.norris.chuck.071508.jpg"
   })
 
@@ -21,6 +22,7 @@ if (Materials.find().count() === 0) {
     name: "Chuck Norris",
     cost: 8140.12,
     quantity: 0,
+    unitId: "u2",
     image: "http://www.cameralook.it/web/wp-content/uploads/2015/03/chuck-norris-600.jpg"
   })
 
@@ -29,6 +31,7 @@ if (Materials.find().count() === 0) {
     name: "String",
     cost: 7135.23,
     quantity: 100,
+    unitId: "u3",
     image: "http://i.sdpnoticias.com/notas/2015/01/19/180329_chuck.jpg"
   })
 
@@ -37,6 +40,7 @@ if (Materials.find().count() === 0) {
     name: "Diamonds",
     cost: 543.23,
     quantity: 4732,
+    unitId: "u4",
     image: "http://blog.rismedia.com/wp-content/uploads/2015/01/Chuck-Norris-1995-kjdlaksd.jpg"
   })
 
@@ -45,6 +49,7 @@ if (Materials.find().count() === 0) {
     name: "Rubys",
     cost: 23.5,
     quantity: 2345,
+    unitId: "u4",
     image: "http://nickadamsinamerica.com/wp-content/uploads/2014/07/chucknorris2.jpg"
   })
 }
