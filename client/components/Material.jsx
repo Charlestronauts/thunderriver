@@ -7,7 +7,7 @@ Material = React.createClass({
 		}
 	},
 
-	submitMaterial() {
+	submitMaterial(event) {
 		// Prevent default browser form submit
       event.preventDefault();
 
@@ -33,12 +33,12 @@ Material = React.createClass({
 	render() {
 	return (
 		<div>
-		  <form className="material-submit">
-				<input ref="name" placeholder="Material Name" />
-				<input ref="cost" placeholder="Material Cost" />
-				<input ref="quantity" placeholder="Material Qty" />
-				<input ref="image" placeholder="Material Name" />
-				<button className="material-submit-button" onSubmit={this.submitMaterial}>This is stupid</button>
+		  <form className="material-submit" onSubmit={this.submitMaterial}>
+				<input ref="name" placeholder="Material Name" value="Test Material Name" />
+				<input ref="cost" placeholder="Material Cost" value="12.32" />
+				<input ref="quantity" placeholder="Material Qty" value="5" />
+				<input ref="image" placeholder="Material Image" value="http://www.fillmurray.com/200/200" />
+				<button className="material-submit-button" type="submit">This is stupid</button>
 		  </form>
 	  	{this.renderMaterials()}
 	  </div>
