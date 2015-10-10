@@ -3,8 +3,8 @@ Material = React.createClass({
 
 	getMeteorData() {
 		return {
-		  materials: Materials.all(),
-		  units: Units.all()
+		  materials: Meteor.user().materials(),
+		  units: Meteor.user().units()
 		}
 	},
 
@@ -21,7 +21,7 @@ Material = React.createClass({
 
       Materials.add(form);
 
-			
+
 	},
 
 	unitOptions(){

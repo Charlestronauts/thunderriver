@@ -5,7 +5,7 @@ FlowRouter.route('/', {
 })
 FlowRouter.route('/materials', {
   action() {
-    ReactLayout.render(App, {content: <Material />})
+    ReactLayout.render(App, {content: <MaterialList />})
   }
 })
 FlowRouter.route('/units', {

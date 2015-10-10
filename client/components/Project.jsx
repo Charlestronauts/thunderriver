@@ -3,8 +3,8 @@ Project = React.createClass({
 
 	getMeteorData() {
 		return {
-		  projects: Projects.all(),
-		  materials: Materials.all()
+		  projects: Meteor.user().projects(),
+		  materials: Meteor.user().materials()
 		}
 	},
 
@@ -19,7 +19,7 @@ Project = React.createClass({
     		React.findDOMNode(value).value = '';
       });
 
-      Projects.add(form);			
+      Projects.add(form);
 	},
 
 	materialOptions(){
