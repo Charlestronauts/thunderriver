@@ -1,4 +1,9 @@
 MaterialItem = React.createClass({
+  deleteMaterial() {
+    Materials.remove(this.props.item._id)
+  },
+
+
   render() {
     var tags
     if (this.props.item.tags) {
@@ -8,6 +13,7 @@ MaterialItem = React.createClass({
         )
       })
     }
+
     return (
       <div className="item">
         <div className="ui tiny image">
@@ -28,14 +34,14 @@ MaterialItem = React.createClass({
             </div>
           </div>
           <div className="extra">
-            <div className="ui right floated blue labeled icon button">
-              Update
+            <button className="ui right floated blue labeled icon button" onClick={this.deleteMaterial}>
               <i className="icon edit"></i>
-            </div>
-            <div className="ui right floated red labeled icon button">
-              Delete
+              Update
+            </button>
+            <button className="ui right floated red labeled icon button">
               <i className="icon trash"></i>
-            </div>
+              Delete
+            </button>
             {tags}
           </div>
         </div>
