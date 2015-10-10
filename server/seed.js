@@ -18,37 +18,37 @@ Meteor.startup(function() {
   var norrisId = Meteor.users.findOne({username: 'norris'})._id
 
   if (Units.find().count() === 0) {
-    Units.add({
+    Units.insert({
       _id: "u1",
       userId: chuckId,
       name: 'SqFt'
     })
 
-    Units.add({
+    Units.insert({
       _id: "u2",
       userId: chuckId,
       name: 'Inches'
     })
 
-    Units.add({
+    Units.insert({
       _id: "u3",
       userId: chuckId,
       name: 'Meters'
     })
 
-    Units.add({
+    Units.insert({
       _id: "u4",
       userId: chuckId,
       name: 'Liters'
     })
 
-    Units.add({
+    Units.insert({
       _id: "u5",
       userId: norrisId,
       name: 'Quarts'
     })
 
-    Units.add({
+    Units.insert({
       _id: "u6",
       userId: norrisId,
       name: 'Gallons'
@@ -56,7 +56,7 @@ Meteor.startup(function() {
   }
 
   if (Materials.find().count() === 0) {
-    Materials.add({
+    Materials.insert({
       _id: "m1",
       userId: chuckId,
       name: "Punkin Fabric",
@@ -66,7 +66,7 @@ Meteor.startup(function() {
       image: "http://www.eonline.com/eol_images/Entire_Site/20080715/300.norris.chuck.071508.jpg"
     })
 
-    Materials.add({
+    Materials.insert({
       _id: "m2",
       userId: chuckId,
       name: "Chuck Norris",
@@ -76,7 +76,7 @@ Meteor.startup(function() {
       image: "http://www.cameralook.it/web/wp-content/uploads/2015/03/chuck-norris-600.jpg"
     })
 
-    Materials.add({
+    Materials.insert({
       _id: "m3",
       userId: chuckId,
       name: "String",
@@ -86,7 +86,7 @@ Meteor.startup(function() {
       image: "http://i.sdpnoticias.com/notas/2015/01/19/180329_chuck.jpg"
     })
 
-    Materials.add({
+    Materials.insert({
       _id: "m4",
       userId: norrisId,
       name: "Diamonds",
@@ -96,7 +96,7 @@ Meteor.startup(function() {
       image: "http://blog.rismedia.com/wp-content/uploads/2015/01/Chuck-Norris-1995-kjdlaksd.jpg"
     })
 
-    Materials.add({
+    Materials.insert({
       _id: "m5",
       userId: norrisId,
       name: "Rubys",
@@ -108,7 +108,7 @@ Meteor.startup(function() {
   }
 
   if (Projects.find().count() === 0) {
-    Projects.add({
+    Projects.insert({
       _id: "p1",
       userId: chuckId,
       name: "Fancy Necklace",
@@ -119,7 +119,7 @@ Meteor.startup(function() {
       materialIds: ["m1", "m2", "m3", "m4"]
     })
 
-    Projects.add({
+    Projects.insert({
       _id: "p2",
       userId: chuckId,
       name: "Punkin Pillow",
@@ -130,7 +130,7 @@ Meteor.startup(function() {
       materialIds: ["m2", "m5"]
     })
 
-    Projects.add({
+    Projects.insert({
       _id: "p3",
       userId: chuckId,
       name: "Pizza",
@@ -141,7 +141,7 @@ Meteor.startup(function() {
       materialIds: ["m1", "m5"]
     })
 
-    Projects.add({
+    Projects.insert({
       _id: "p4",
       userId: chuckId,
       name: "Chocolate Looking Couch",
@@ -152,7 +152,7 @@ Meteor.startup(function() {
       materialIds: ["m5"]
     })
 
-    Projects.add({
+    Projects.insert({
       _id: "p5",
       userId: norrisId,
       name: "Earings",
@@ -164,7 +164,7 @@ Meteor.startup(function() {
       materialIds: []
     })
 
-    Projects.add({
+    Projects.insert({
       _id: "p6",
       userId: norrisId,
       name: "Robot Chicken",
