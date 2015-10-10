@@ -1,6 +1,5 @@
 ProjectItem = React.createClass({
   render() {
-    console.log(4)
     return (
       <div className='column'>
         <div className="ui card centered">
