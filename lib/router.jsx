@@ -15,6 +15,6 @@ FlowRouter.route('/units', {
 })
 FlowRouter.route('/projects', {
   action() {
-    ReactLayout.render(App, {content: <Project />})
+    ReactLayout.render(App, {content: <ProjectsList />})
   }
 })

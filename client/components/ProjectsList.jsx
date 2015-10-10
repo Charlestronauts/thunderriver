@@ -9,7 +9,7 @@ ProjectsList = React.createClass({
 
   getMeteorData() {
     return {
-      projects: Projects.find({}).fetch()
+      projects: Projects.all()
     }
   },
 
