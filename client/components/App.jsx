@@ -3,10 +3,10 @@ const style = {
 }
 
 App = React.createClass({
-  render() {
+  render () {
     return (
       <div style={style}>
-        <LogIn />
+        <NavBar />
         {this.props.content}
       </div>
     )
