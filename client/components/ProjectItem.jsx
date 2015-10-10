@@ -4,11 +4,11 @@ ProjectItem = React.createClass({
       <div className='column'>
         <div className="ui card centered">
           <a className="ui image centered">
-            <image src="http://fillmurray.com/300/300" />
+            <image src={this.props.project.img} />
           </a>
           <div className="content">
             <a className="header" href="#">Trying Cards</a>
-            <div class="meta">
+            <div className="meta">
               Maybe tags go here, maybe.
             </div>
           </div>
