@@ -7,15 +7,20 @@ Material = React.createClass({
 		}
 	},
 
-	submitMaterial(event) {
+	submitMaterial() {
 		// Prevent default browser form submit
       event.preventDefault();
 
+      var form= Array()
       //unserialize form
-      const form = this.refs.form.getDOMNode().elements;
+      _.map(this.refs, function(value, key){
+    		form[key]= React.findDOMNode(value).value
+    		React.findDOMNode(value).value = '';
+      });
+
       Materials.add(form);
 
-				input.value = '';
+			
 	},
 
 	renderMaterials() {
@@ -34,10 +39,10 @@ Material = React.createClass({
 	return (
 		<div>
 		  <form className="material-submit" onSubmit={this.submitMaterial}>
-				<input ref="name" placeholder="Material Name" value="Test Material Name" />
-				<input ref="cost" placeholder="Material Cost" value="12.32" />
-				<input ref="quantity" placeholder="Material Qty" value="5" />
-				<input ref="image" placeholder="Material Image" value="http://www.fillmurray.com/200/200" />
+				<input ref="name" placeholder="Material Name" />
+				<input ref="cost" placeholder="Material Cost" />
+				<input ref="quantity" placeholder="Material Qty" />
+				<input ref="image" placeholder="Material Image" />
 				<button className="material-submit-button" type="submit">This is stupid</button>
 		  </form>
 	  	{this.renderMaterials()}
