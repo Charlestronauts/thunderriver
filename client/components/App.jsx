@@ -7,7 +7,7 @@ App = React.createClass({
     return (
       <div style={style}>
         <NavBar />
-        <ProjectsList />
+        {this.props.content}
       </div>
     )
   }
