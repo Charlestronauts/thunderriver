@@ -3,7 +3,8 @@ Material = React.createClass({
 
 	getMeteorData() {
 		return {
-		  materials: Materials.all()
+		  materials: Materials.all(),
+		  units: Units.all()
 		}
 	},
 
@@ -23,6 +24,14 @@ Material = React.createClass({
 			
 	},
 
+	unitOptions(){
+		return this.data.units.map((unit) => {
+				return (
+					<option value={unit._id}>{unit.name}</option>
+				)
+			})
+	},
+
 	renderMaterials() {
 		return this.data.materials.map((material) => {
 		  return (
@@ -31,22 +40,21 @@ Material = React.createClass({
 		})
 	},
 
-	addThing() {
-		Materials.add(Date.now())
-	},
-
 	render() {
-	return (
-		<div>
-		  <form className="material-submit" onSubmit={this.submitMaterial}>
-				<input ref="name" placeholder="Material Name" />
-				<input ref="cost" placeholder="Material Cost" />
-				<input ref="quantity" placeholder="Material Qty" />
-				<input ref="image" placeholder="Material Image" />
-				<button className="material-submit-button" type="submit">This is stupid</button>
-		  </form>
-	  	{this.renderMaterials()}
-	  </div>
-	)
-}
+		return (
+			<div>
+			  <form className="material-submit" onSubmit={this.submitMaterial}>
+					<input ref="name" placeholder="Material Name" />
+					<input ref="cost" placeholder="Material Cost" type = "number"/>
+					<input ref="quantity" placeholder="Material Qty" type = "number" />
+					<input ref="image" placeholder="Material Image" />
+					<select ref="units">
+						{this.unitOptions()}
+					</select>
+					<button className="material-submit-button" type="submit">Add Material</button>
+			  </form>
+		  	{this.renderMaterials()}
+		  </div>
+		)
+	}
 })
