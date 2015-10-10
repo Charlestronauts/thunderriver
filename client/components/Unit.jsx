@@ -3,7 +3,7 @@ Unit = React.createClass({
 
 	getMeteorData() {
 		return {
-		  units: Units.all()
+		  units: Meteor.user().units()
 		}
 	},
 
