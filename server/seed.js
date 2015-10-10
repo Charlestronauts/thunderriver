@@ -14,40 +14,43 @@ Meteor.startup(function() {
     })
   }
 
+  var chuckId = Meteor.users.findOne({username: 'chuck'})._id
+  var norrisId = Meteor.users.findOne({username: 'norris'})._id
+
   if (Units.find().count() === 0) {
     Units.add({
       _id: "u1",
-      userId: "",
+      userId: chuckId,
       name: 'SqFt'
     })
 
     Units.add({
       _id: "u2",
-      userId: "",
+      userId: chuckId,
       name: 'Inches'
     })
 
     Units.add({
       _id: "u3",
-      userId: "",
+      userId: chuckId,
       name: 'Meters'
     })
 
     Units.add({
       _id: "u4",
-      userId: "",
+      userId: chuckId,
       name: 'Liters'
     })
 
     Units.add({
       _id: "u5",
-      userId: "",
+      userId: norrisId,
       name: 'Quarts'
     })
 
     Units.add({
       _id: "u6",
-      userId: "",
+      userId: norrisId,
       name: 'Gallons'
     })
   }
@@ -55,6 +58,7 @@ Meteor.startup(function() {
   if (Materials.find().count() === 0) {
     Materials.add({
       _id: "m1",
+      userId: chuckId,
       name: "Punkin Fabric",
       cost: 123,
       quantity: 3,
@@ -64,6 +68,7 @@ Meteor.startup(function() {
 
     Materials.add({
       _id: "m2",
+      userId: chuckId,
       name: "Chuck Norris",
       cost: 8140.12,
       quantity: 0,
@@ -73,6 +78,7 @@ Meteor.startup(function() {
 
     Materials.add({
       _id: "m3",
+      userId: chuckId,
       name: "String",
       cost: 7135.23,
       quantity: 100,
@@ -82,6 +88,7 @@ Meteor.startup(function() {
 
     Materials.add({
       _id: "m4",
+      userId: norrisId,
       name: "Diamonds",
       cost: 543.23,
       quantity: 4732,
@@ -91,6 +98,7 @@ Meteor.startup(function() {
 
     Materials.add({
       _id: "m5",
+      userId: norrisId,
       name: "Rubys",
       cost: 23.5,
       quantity: 2345,
@@ -102,6 +110,7 @@ Meteor.startup(function() {
   if (Projects.find().count() === 0) {
     Projects.add({
       _id: "p1",
+      userId: chuckId,
       name: "Fancy Necklace",
       description: "I lovez the necklaces, they are kute!!",
       timeEstimate: 5,
@@ -112,6 +121,7 @@ Meteor.startup(function() {
 
     Projects.add({
       _id: "p2",
+      userId: chuckId,
       name: "Punkin Pillow",
       description: "",
       timeEstimate: 4,
@@ -122,6 +132,7 @@ Meteor.startup(function() {
 
     Projects.add({
       _id: "p3",
+      userId: chuckId,
       name: "Pizza",
       description: "I like pizza better than Jimmy Johns, and so do you.",
       timeEstimate: 1,
@@ -132,6 +143,7 @@ Meteor.startup(function() {
 
     Projects.add({
       _id: "p4",
+      userId: chuckId,
       name: "Chocolate Looking Couch",
       description: "A couch that looks like chocolate, but don't try to eat it, it is not made of chocolate.",
       timeEstimate: 1,
@@ -142,6 +154,7 @@ Meteor.startup(function() {
 
     Projects.add({
       _id: "p5",
+      userId: norrisId,
       name: "Earings",
       description: "Those things you wear on your fingers",
       timeEstimate: 7,
@@ -153,6 +166,7 @@ Meteor.startup(function() {
 
     Projects.add({
       _id: "p6",
+      userId: norrisId,
       name: "Robot Chicken",
       description: "Yeah, duh.",
       timeEstimate: 234,
