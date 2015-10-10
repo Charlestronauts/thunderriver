@@ -16,13 +16,13 @@ ProjectsView = React.createClass({
     //   projects: Projects.search(search)
     // }
   },
-//
+	//
   // getInitialState() {
   //   return {
   //     search: false
   //   }
   // },
-//
+	//
 	// filterResults(){
 	// 	// Prevent default browser form submit
   //   event.preventDefault();
@@ -36,12 +36,12 @@ ProjectsView = React.createClass({
   //   React.findDOMNode(this.refs.search).value = '';
 	// },
 
-	renderProjectList() {
-    return <ProjectsList parent={this} />
+	renderListControls() {
+    return <ListControls parent={this} />
   },
 
-	renderListControls() {
-		return <ListControls projects={this.data.projects} />
+	renderProjectList() {
+		return <ProjectsList projects={this.data.projects} />
 	},
 
 	render() {
@@ -50,7 +50,7 @@ ProjectsView = React.createClass({
 	        <div className='ui'>
 						{this.renderListControls()}
 					</div>
-	        <div className='ui stackable four column doubling grid'>
+	        <div>
 	          {this.renderProjectList()}
 	        </div>
 	      </div>
