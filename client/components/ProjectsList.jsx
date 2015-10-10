@@ -5,16 +5,8 @@ const style = {
 }
 
 ProjectsList = React.createClass({
-  mixins: [ReactMeteorData],
-
-  getMeteorData() {
-    return {
-      projects: Projects.all()
-    }
-  },
-
   renderProjectItems() {
-    return this.data.projects.map((project) => {
+    return this.props.projects.map((project) => {
       return <ProjectItem key={project._id} project={project} />
     })
   },
