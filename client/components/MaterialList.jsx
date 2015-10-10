@@ -23,25 +23,27 @@ MaterialList = React.createClass({
 
   addHandler(e) {
     e.preventDefault();
+    $('.create-material-modal').modal('show')
 
-    Materials.add({
-      "name": 'Barbra Streisand',
-      "cost": 123,
-      "quantity": 123,
-      "image": 'http://fillmurray.com/200/200',
-    })
+    // Materials.add({
+    //   "name": 'Barbra Streisand',
+    //   "cost": 123,
+    //   "quantity": 123,
+    //   "image": 'http://fillmurray.com/200/200',
+    // })
   },
 
   render() {
     return (
       <div className="container materials">
-        <button className='ui green labeled icon button addProject' style={style.addButton} onClick={this.addHandler}>
+        <button className='ui green labeled icon button' style={style.addButton} onClick={this.addHandler}>
           <i className="plus icon"></i>
           Add
         </button>
         <div className="ui divided items">
           {this.renderMaterialItems()}
         </div>
+        <MaterialCreateModal />
       </div>
     )
   }
