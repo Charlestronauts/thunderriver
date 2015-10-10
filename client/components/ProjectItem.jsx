@@ -4,12 +4,12 @@ ProjectItem = React.createClass({
       <div className='column'>
         <div className="ui card centered">
           <a className="ui image centered">
-            <image src={this.props.project.img} />
+            <image src={this.props.project.image} />
           </a>
           <div className="content">
             <a className="header" href="#">{this.props.project.name}</a>
             <div className="meta">
-              {this.props.project.desc}
+              {this.props.project.description}
             </div>
           </div>
         </div>
