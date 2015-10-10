@@ -56,7 +56,8 @@ if (Projects.find().count() === 0) {
     description: "I lovez the necklaces, they are kute!!",
     timeEstimate: 5,
     image: "http://images4.fanpop.com/image/photos/14700000/Monkeys-monkeys-14750729-1600-1200.jpg",
-    difficulty: 1
+    difficulty: 1,
+    materialIds: ["m1", "m2", "m3", "m4"]
   })
 
   Projects.add({
@@ -65,7 +66,8 @@ if (Projects.find().count() === 0) {
     description: "",
     timeEstimate: 4,
     image: "http://www.guygray.org/wp-content/uploads/2013/08/animals-monkeys-HD-Wallpapers.jpg",
-    difficulty: 1
+    difficulty: 1,
+    materialIds: ["m2", "m5"]
   })
 
   Projects.add({
@@ -74,7 +76,8 @@ if (Projects.find().count() === 0) {
     description: "I like pizza better than Jimmy Johns, and so do you.",
     timeEstimate: 1,
     image: "",
-    difficulty: 1
+    difficulty: 1,
+    materialIds: ["m1", "m5"]
   })
 
   Projects.add({
@@ -83,7 +86,8 @@ if (Projects.find().count() === 0) {
     description: "A couch that looks like chocolate, but don't try to eat it, it is not made of chocolate.",
     timeEstimate: 1,
     image: "http://images4.fanpop.com/image/photos/14700000/Lemurs-monkeys-14750770-1600-1200.jpg",
-    difficulty: 3
+    difficulty: 3,
+    materialIds: ["m5"]
   })
 
   Projects.add({
@@ -92,7 +96,9 @@ if (Projects.find().count() === 0) {
     description: "Those things you wear on your fingers",
     timeEstimate: 7,
     image: "http://www.catherinenicole.com/wp-content/uploads/2011/05/earrings-angela-w1.jpg",
-    difficulty: 2
+    difficulty: 2,
+    // Empty material ids
+    materialIds: []
   })
 
   Projects.add({
@@ -101,79 +107,7 @@ if (Projects.find().count() === 0) {
     description: "Yeah, duh.",
     timeEstimate: 234,
     image: "http://images.fanpop.com/images/image_uploads/Robot-Chicken-robot-chicken-153706_1600_1200.jpg",
-    difficulty: 3
+    difficulty: 3,
+    // No material ids
   })
 }
-
-if (ProjectMaterials.find().count() === 0) {
-  ProjectMaterials.add({
-    projectId: "p1",
-    materialId: "m1"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p1",
-    materialId: "m2"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p1",
-    materialId: "m3"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p1",
-    materialId: "m4"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p2",
-    materialId: "m2"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p2",
-    materialId: "m5"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p3",
-    materialId: "m1"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p3",
-    materialId: "m5"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p4",
-    materialId: "m5"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p5",
-    materialId: "m2"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p5",
-    materialId: "m3"
-  })
-
-  ProjectMaterials.add({
-    projectId: "p5",
-    materialId: "m4"
-  })
-
-  // No p6
-
-}
-
-// {
-//   name: "",
-//   description: "",
-//   timeEstimate: 234
-//   image: URL
-//   difficulty: 1
-// }
