@@ -175,4 +175,28 @@ Meteor.startup(function() {
       // No material ids
     })
   }
+
+  if (Settings.find().count() === 0) {
+
+    Settings.insert({
+      userId: chuckId,
+      markupPercent: 50,
+      minimumProfit: 3.50,
+      rounding: 1.0,
+      realName: "Chucky the Norris",
+      storeName: "Chucky Doll Store",
+    })
+
+    Settings.insert({
+      userId: norrisId,
+      markupPercent: 10,
+      minimumProfit: 1,
+      rounding: 0.5,
+      realName: "Chuck Norris",
+      storeName: "Just Martial Artz",
+    })
+
+
+  }
+
 });
