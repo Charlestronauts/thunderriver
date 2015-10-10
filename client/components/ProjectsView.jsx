@@ -3,13 +3,14 @@ ProjectsView = React.createClass({
 
 	getMeteorData() {
 		var search = undefined;
- 
+
     if (this.state.search.allow) {
       // If hide completed is checked, filter tasks
       search = this.state.search.term;
     }
 
     return {
+      user: Meteor.user(),
       projects: Projects.search(search)
     }
   },
