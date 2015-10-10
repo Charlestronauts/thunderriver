@@ -9,7 +9,7 @@ ProjectsList = React.createClass({
 
   getMeteorData() {
     return {
-      projects: Projects.all()
+      projects: Meteor.user().projects()
     }
   },
 
