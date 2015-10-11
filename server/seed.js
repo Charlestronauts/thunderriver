@@ -62,7 +62,7 @@ Meteor.startup(function() {
       name: "Punkin Fabric",
       cost: 123,
       quantity: 3,
-      unitId: "u1",
+      unit: "SqFt",
       image: "http://www.eonline.com/eol_images/Entire_Site/20080715/300.norris.chuck.071508.jpg"
     })
 
@@ -72,7 +72,7 @@ Meteor.startup(function() {
       name: "Chuck Norris",
       cost: 8140.12,
       quantity: 0,
-      unitId: "u2",
+      unit: "Inches",
       image: "http://www.cameralook.it/web/wp-content/uploads/2015/03/chuck-norris-600.jpg"
     })
 
@@ -82,7 +82,7 @@ Meteor.startup(function() {
       name: "String",
       cost: 7135.23,
       quantity: 100,
-      unitId: "u3",
+      unit: "Meters",
       image: "http://i.sdpnoticias.com/notas/2015/01/19/180329_chuck.jpg"
     })
 
@@ -92,7 +92,7 @@ Meteor.startup(function() {
       name: "Diamonds",
       cost: 543.23,
       quantity: 4732,
-      unitId: "u4",
+      unit: "Meters",
       image: "http://blog.rismedia.com/wp-content/uploads/2015/01/Chuck-Norris-1995-kjdlaksd.jpg"
     })
 
@@ -102,7 +102,7 @@ Meteor.startup(function() {
       name: "Rubys",
       cost: 23.5,
       quantity: 2345,
-      unitId: "u4",
+      unit: "Meters",
       image: "http://nickadamsinamerica.com/wp-content/uploads/2014/07/chucknorris2.jpg"
     })
   }

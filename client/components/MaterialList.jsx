@@ -1,25 +1,16 @@
+const style = {
+  table: {
+    border: 'none'
+  },
+
+  th: {
+    background: 0
+  }
+}
+
 MaterialList = React.createClass({
 
   renderMaterialItems() {
-    // return _.map(this.props.materials, (materialItem) => {
-    //   return (
-    //     <tr>
-    //       <td>
-    //         <h4 class="ui image header">
-    //           <img src="/images/avatar2/small/lena.png" class="ui mini rounded image">
-    //           <div class="content">
-    //             Lena
-    //             <div class="sub header">Human Resources
-    //           </div>
-    //         </div>
-    //       </h4></td>
-    //       <td>
-    //         22
-    //       </td>
-    //     </tr>
-    //   )
-    // })
-
     return _.map(this.props.materials, (materialItem) => {
       return (
         <MaterialItem key={materialItem._id} item={materialItem} />
@@ -29,94 +20,32 @@ MaterialList = React.createClass({
 
   render() {
     return (
-      <table class="ui very basic collapsing celled table">
-        <thead>
-          <tr>
-            <th>Employee</th>
-            <th>Employee</th>
-          </tr>
-          <tbody>
-            {this.renderMaterialItems()}
-          </tbody>
-
-        </thead>
-      </table>
-    )
-
-
-    // return (
-    //   <div className="ui divided items">
-    //     {this.renderMaterialItems()}
-    //   </div>
-    // )
+        <div className="html ui top attached segment">
+          <table className='ui celled table' style={style.table}>
+            <thead>
+              <tr>
+                <th style={style.th}></th>
+                <th style={style.th}>Description</th>
+                <th style={style.th}>Remaining Quantity</th>
+                <th style={style.th}>Cost Per Unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.renderMaterialItems()}
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colSpan='4' style={style.th}>
+                  <div className='right floated small ui green labeled icon button'
+                       onClick={this.handleAddMaterial}>
+                    <i className='add icon'></i> Add Material
+                  </div>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+          <div className="ui top attached label">Example</div>
+        </div>
+      )
   }
 })
-
-/*
-
-<table class="ui very basic collapsing celled table">
-  <thead>
-    <tr><th>Employee</th>
-    <th>Correct Guesses</th>
-  </tr></thead>
-  <tbody>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          <img src="/images/avatar2/small/lena.png" class="ui mini rounded image">
-          <div class="content">
-            Lena
-            <div class="sub header">Human Resources
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        22
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          <img src="/images/avatar2/small/matthew.png" class="ui mini rounded image">
-          <div class="content">
-            Matthew
-            <div class="sub header">Fabric Design
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        15
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          <img src="/images/avatar2/small/lindsay.png" class="ui mini rounded image">
-          <div class="content">
-            Lindsay
-            <div class="sub header">Entertainment
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        12
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          <img src="/images/avatar2/small/mark.png" class="ui mini rounded image">
-          <div class="content">
-            Mark
-            <div class="sub header">Executive
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        11
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-*/
