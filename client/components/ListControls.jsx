@@ -12,9 +12,8 @@ ListControls = React.createClass({
 
     var searchTerm = React.findDOMNode(this.refs.search).value
 
-    var curState = this.props.parent.state;
-    curState.searchTerm = searchTerm;
-    this.props.parent.setState(curState);
+    var p = this.props.parent
+    p.setState({...p.state, searchTerm: searchTerm})
   },
 
   addHandler(e) {
@@ -22,7 +21,7 @@ ListControls = React.createClass({
     this.props.parent.addItem();
   },
 
-  doClear() {
+  doClear(event) {
     // Prevent default browser form submit
     event.preventDefault();
     React.findDOMNode(this.refs.search).value = '';
