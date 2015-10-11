@@ -8,6 +8,14 @@ ProjectsView = React.createClass({
 		}
   },
 
+	addItem() {
+    Projects.add({
+      image:'http://fillmurray.com/300/300',
+      name:'name',
+      description:'desc'
+    })
+  },
+
 	renderListControls() {
     return <ListControls parent={this} />
   },

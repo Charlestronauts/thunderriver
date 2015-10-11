@@ -19,13 +19,7 @@ ListControls = React.createClass({
 
   addHandler(e) {
     e.preventDefault()
-
-    // TODO: Move logic
-    Projects.add({
-      image:'http://fillmurray.com/300/300',
-      name:'name',
-      description:'desc'
-    })
+    this.props.parent.addItem();
   },
 
 	doClear() {
