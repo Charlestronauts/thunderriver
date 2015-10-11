@@ -32,7 +32,7 @@ NavBar = React.createClass({
             <i className='setting icon'></i>
           </a>
         </div>
-        <LogInNav />
+        <BlazeWrapper template={Template.atNavButton} />
       </div>
     )
   }

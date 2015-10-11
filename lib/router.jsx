@@ -39,6 +39,6 @@ FlowRouter.route('/project/:projectId', {
 
 FlowRouter.route('/login', {
   action() {
-    ReactLayout.render(App, {content: <LogIn />})
+    ReactLayout.render(App, {content: <BlazeWrapper template={Template.atForm} />})
   }
 })
