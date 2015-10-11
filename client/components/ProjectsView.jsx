@@ -4,7 +4,6 @@ ProjectsView = React.createClass({
   getMeteorData() {
     var search = this.state ? this.state.searchTerm : "";
     return {
-      user: Meteor.user(),
       projects: Projects.search(search)
     }
   },
@@ -17,22 +16,14 @@ ProjectsView = React.createClass({
     })
   },
 
-  renderListControls() {
-    return <ListControls parent={this} />
-  },
-
-  renderProjectList() {
-    return <ProjectsList projects={this.data.projects} />
-  },
-
   render() {
       return (
         <div>
-          <div className='ui'>
-            {this.renderListControls()}
+          <div>
+            <ListControls parent={this} />
           </div>
           <div>
-            {this.renderProjectList()}
+            <ProjectsList projects={this.data.projects} />
           </div>
         </div>
       )

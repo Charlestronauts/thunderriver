@@ -1,6 +1,6 @@
-LogIn = React.createClass({
+LogInNav = React.createClass({
   componentDidMount() {
-    this.view = Blaze.render(Template.atForm, React.findDOMNode(this.refs.container))
+    this.view = Blaze.render(Template.atNavButton, React.findDOMNode(this.refs.container))
   },
 
   componentWillUnmount() {

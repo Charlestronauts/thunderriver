@@ -4,7 +4,7 @@ MaterialList = React.createClass({
     console.log(this.props.materials)
     return _.map(this.props.materials, (materialItem) => {
       return (
-        <MaterialItem item={materialItem} />
+        <MaterialItem key={materialItem._id} item={materialItem} />
       )
     })
   },
