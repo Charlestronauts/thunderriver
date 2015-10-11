@@ -1,8 +1,17 @@
 NavBar = React.createClass({
+  componentDidMount() {
+    setTimeout(() => {
+      const $thing = $(`[data-route='${FlowRouter.current().path}']`)
+
+      $('.active.item').removeClass('active')
+      $thing.addClass('active')
+    }, 0)
+  },
+
   handleClick(e) {
     const $target = $(e.target)
 
-    $('.item.active').removeClass('active')
+    $('.active.item').removeClass('active')
     $target.addClass('active')
 
     FlowRouter.go($target.attr('data-route'))
