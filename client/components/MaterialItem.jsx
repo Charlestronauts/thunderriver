@@ -15,37 +15,60 @@ MaterialItem = React.createClass({
     }
 
     return (
-      <div className="item">
-        <div className="ui tiny image">
-          <img src={this.props.item.image} />
-        </div>
-        <div className="content">
-          <div className="description">
-            <div className="ui relaxed divided list">
-              <div className="item">
-                <strong>{this.props.item.name}</strong>
-              </div>
-              <div className="item">
-                ${this.props.item.cost}
-              </div>
-              <div className="item">
-                <strong>Quantity</strong> {this.props.item.quantity} {this.props.item.unit}
-              </div>
+      <tr>
+        <td>
+          <h4 class="ui image header">
+            <div className="ui tiny image">
+              <img src={this.props.item.image} class="ui tiny rounded image" />
             </div>
-          </div>
-          <div className="extra">
-            <button className="ui right floated blue labeled icon button" onClick={this.deleteMaterial}>
-              <i className="icon edit"></i>
-              Update
-            </button>
-            <button className="ui right floated red labeled icon button">
-              <i className="icon trash"></i>
-              Delete
-            </button>
-            {tags}
-          </div>
-        </div>
-      </div>
+            <div class="content">
+              <strong>{this.props.item.name}</strong>
+              <div class="sub header">Human</div>
+            </div>
+          </h4>
+        </td>
+        <td>
+          ${this.props.item.cost}
+        </td>
+        <td>
+          {this.props.item.quantity} {this.props.item.unit}
+        </td>
+      </tr>
     )
+
+
+    // return (
+    //   <div className="item">
+    //     <div className="ui tiny image">
+    //       <img src={this.props.item.image} />
+    //     </div>
+    //     <div className="content">
+    //       <div className="description">
+    //         <div className="ui relaxed divided list">
+    //           <div className="item">
+    //             <strong>{this.props.item.name}</strong>
+    //           </div>
+    //           <div className="item">
+    //             ${this.props.item.cost}
+    //           </div>
+    //           <div className="item">
+    //             <strong>Quantity</strong> {this.props.item.quantity} {this.props.item.unit}
+    //           </div>
+    //         </div>
+    //       </div>
+    //       <div className="extra">
+    //         <button className="ui right floated blue labeled icon button" onClick={this.deleteMaterial}>
+    //           <i className="icon edit"></i>
+    //           Update
+    //         </button>
+    //         <button className="ui right floated red labeled icon button">
+    //           <i className="icon trash"></i>
+    //           Delete
+    //         </button>
+    //         {tags}
+    //       </div>
+    //     </div>
+    //   </div>
+    // )
   }
 })
