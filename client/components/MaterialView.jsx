@@ -12,10 +12,6 @@ MaterialView = React.createClass({
     // TODO: Add something
   },
 
-  renderListControls() {
-    return <ListControls parent={this} />
-  },
-
   renderProjectList() {
     return <MaterialList materials={this.data.materials} />
   },
@@ -23,8 +19,8 @@ MaterialView = React.createClass({
   render() {
       return (
         <div>
-          <div className='ui'>
-            {this.renderListControls()}
+          <div>
+            <ListControls parent={this} />
           </div>
           <div>
             {this.renderProjectList()}
