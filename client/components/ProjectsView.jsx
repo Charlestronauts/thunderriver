@@ -2,16 +2,10 @@ ProjectsView = React.createClass({
 	mixins: [ReactMeteorData],
 
 	getMeteorData() {
-		console.log(this.state.searchTerm)
+		var search = this.state ? this.state.searchTerm : "";
 		return {
-		  projects: Projects.search(this.state.searchTerm)
+		  projects: Projects.search(search)
 		}
-  },
-	//
-  getInitialState() {
-    return {
-      searchTerm: ""
-    }
   },
 
 	renderListControls() {
