@@ -26,7 +26,7 @@ ListControls = React.createClass({
     }
   },
 
-	filterResults(){
+	filterResults() {
 		// Prevent default browser form submit
     event.preventDefault();
 
@@ -39,7 +39,17 @@ ListControls = React.createClass({
     React.findDOMNode(this.refs.search).value = '';
 	},
 
-	doClear(){
+  addHandler(e) {
+    e.preventDefault()
+
+    Projects.add({
+      image:'http://fillmurray.com/300/300',
+      name:'name',
+      description:'desc'
+    })
+  },
+
+	doClear() {
 		// Prevent default browser form submit
     event.preventDefault();
 

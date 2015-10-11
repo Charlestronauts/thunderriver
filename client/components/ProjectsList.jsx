@@ -7,16 +7,6 @@ ProjectsList = React.createClass({
     })
   },
 
-  addHandler(e) {
-    e.preventDefault()
-
-    Projects.add({
-      img:'http://fillmurray.com/300/300',
-      name:'name',
-      desc:'desc'
-    })
-  },
-
   render() {
     return (
       <div className='ui stackable four column doubling grid'>
