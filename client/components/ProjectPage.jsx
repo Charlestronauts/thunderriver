@@ -17,7 +17,7 @@ ProjectPage = React.createClass({
               <div className='ui blue ribbon label'>
                 {this.data.project.name}
               </div>
-              <img src={this.data.project.image} />
+              <img src={this.data.project.getImage()} />
             </div>
             <div className='content'>
               <div className='meta'>Description</div>
