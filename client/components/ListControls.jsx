@@ -6,7 +6,7 @@ const style = {
 
 ListControls = React.createClass({
 
-  filterResults() {
+  filterResults(event) {
     // Prevent default browser form submit
     event.preventDefault();
 
