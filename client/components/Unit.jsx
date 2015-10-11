@@ -1,42 +1,42 @@
 Unit = React.createClass({
-	mixins: [ReactMeteorData],
+  mixins: [ReactMeteorData],
 
-	getMeteorData() {
-		return {
-		  units: Meteor.user().units()
-		}
-	},
+  getMeteorData() {
+    return {
+      units: Meteor.user().units()
+    }
+  },
 
-	submitUnit() {
-		// Prevent default browser form submit
+  submitUnit() {
+    // Prevent default browser form submit
       event.preventDefault();
 
       var form= Array()
       //unserialize form
       _.map(this.refs, function(value, key){
-    		form[key]= React.findDOMNode(value).value
-    		React.findDOMNode(value).value = '';
+        form[key]= React.findDOMNode(value).value
+        React.findDOMNode(value).value = '';
       });
 
       Units.add(form);
-	},
+  },
 
-	renderUnits() {
-		return this.data.units.map((unit) => {
-		  return (
-		  	<div>{unit.name}</div>
-  		)
-		})
-	},
+  renderUnits() {
+    return this.data.units.map((unit) => {
+      return (
+        <div>{unit.name}</div>
+      )
+    })
+  },
 
-	render() {
-		return (
-			<div>
-			  <form className="unit-submit" onSubmit={this.submitUnit}>
-					<input ref="name" placeholder="Unit Name" />
-			  </form>
-		  	{this.renderUnits()}
-		  </div>
-		)
-	}
+  render() {
+    return (
+      <div>
+        <form className="unit-submit" onSubmit={this.submitUnit}>
+          <input ref="name" placeholder="Unit Name" />
+        </form>
+        {this.renderUnits()}
+      </div>
+    )
+  }
 })

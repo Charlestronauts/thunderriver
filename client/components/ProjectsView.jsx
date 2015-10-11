@@ -1,15 +1,15 @@
 ProjectsView = React.createClass({
-	mixins: [ReactMeteorData],
+  mixins: [ReactMeteorData],
 
-	getMeteorData() {
-		var search = this.state ? this.state.searchTerm : "";
-		return {
-		  user: Meteor.user(),
-		  projects: Projects.search(search)
-		}
+  getMeteorData() {
+    var search = this.state ? this.state.searchTerm : "";
+    return {
+      user: Meteor.user(),
+      projects: Projects.search(search)
+    }
   },
 
-	addItem() {
+  addItem() {
     Projects.add({
       image:'http://fillmurray.com/300/300',
       name:'name',
@@ -17,24 +17,24 @@ ProjectsView = React.createClass({
     })
   },
 
-	renderListControls() {
+  renderListControls() {
     return <ListControls parent={this} />
   },
 
-	renderProjectList() {
-		return <ProjectsList projects={this.data.projects} />
-	},
+  renderProjectList() {
+    return <ProjectsList projects={this.data.projects} />
+  },
 
-	render() {
-	    return (
-	      <div>
-	        <div className='ui'>
-						{this.renderListControls()}
-					</div>
-	        <div>
-	          {this.renderProjectList()}
-	        </div>
-	      </div>
-	    )
+  render() {
+      return (
+        <div>
+          <div className='ui'>
+            {this.renderListControls()}
+          </div>
+          <div>
+            {this.renderProjectList()}
+          </div>
+        </div>
+      )
   }
 })
