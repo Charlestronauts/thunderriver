@@ -5,26 +5,6 @@ const style = {
 }
 
 ListControls = React.createClass({
-	// mixins: [ReactMeteorData],
-  //
-	// getMeteorData() {
-	// 	var search = undefined;
-  //
-  //   if (this.state.search.allow) {
-  //     // If hide completed is checked, filter tasks
-  //     search = this.state.search.term;
-  //   }
-  //
-  //   return {
-  //     projects: Projects.search(search)
-  //   }
-  // },
-
-  // getInitialState() {
-  //   return {
-  //     search: false
-  //   }
-  // },
 
 	filterResults() {
 		// Prevent default browser form submit
@@ -35,12 +15,6 @@ ListControls = React.createClass({
     var curState = this.props.parent.state;
     curState.searchTerm = searchTerm;
     this.props.parent.setState(curState);
-
-		// this.setState({
-    //   search: { allow: true, term: search_term }
-    // });
-
-    // React.findDOMNode(this.refs.search).value = '';
 	},
 
   addHandler(e) {
