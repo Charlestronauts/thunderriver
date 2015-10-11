@@ -4,6 +4,7 @@ ProjectsView = React.createClass({
 	getMeteorData() {
 		var search = this.state ? this.state.searchTerm : "";
 		return {
+		  user: Meteor.user(),
 		  projects: Projects.search(search)
 		}
   },

@@ -9,6 +9,7 @@ MaterialList = React.createClass({
 
   getMeteorData() {
     return {
+      user: Meteor.user(),
       materials: Materials.find({}).fetch()
     }
   },

@@ -1,5 +1,11 @@
 const style = {
-  padding: '10px 15px'
+  main: {
+    padding: '10px 15px'
+  },
+  container: {
+    maxWidth: 1000,
+    margin: '0 auto'
+  }
 }
 
 App = React.createClass({
@@ -7,7 +13,9 @@ App = React.createClass({
     return (
       <div style={style}>
         <NavBar />
-        {this.props.content}
+        <div className='container' style={style.container}>
+          {this.props.content}
+        </div>
       </div>
     )
   }
