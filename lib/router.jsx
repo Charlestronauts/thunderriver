@@ -1,3 +1,12 @@
+// forward to /login if they aren't authenticated
+FlowRouter.triggers.enter([(context, redirect) => {
+  if(context.path !== '/login'){
+    if(!Meteor.userId()){
+      redirect('/login');
+    }
+  }
+}])
+
 FlowRouter.route('/', {
   action() {
     ReactLayout.render(App, {content: <ProjectPage />})
