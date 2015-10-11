@@ -9,7 +9,7 @@ MaterialView = React.createClass({
   },
 
   addItem() {
-    // TODO: Add something
+    $('.create-material-modal').modal('show')
   },
 
   renderProjectList() {
@@ -25,6 +25,7 @@ MaterialView = React.createClass({
           <div>
             {this.renderProjectList()}
           </div>
+          <MaterialCreateModal />
         </div>
       )
   }
