@@ -38,7 +38,9 @@ ListControls = React.createClass({
             Add
           </button>
           <form className="unit-submit" onSubmit={this.filterResults}>
-            <input ref="search" type="text" placeholder="Filter Projects" />
+            <div className='ui input'>
+              <input ref="search" type="text" placeholder="Filter Projects" />
+            </div>
             <button className='ui red button' type='button' onClick={this.doClear}>Clear</button>
             <button className='ui green button' type='submit'>Submit</button>
           </form>
