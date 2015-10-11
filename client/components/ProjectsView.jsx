@@ -2,8 +2,9 @@ ProjectsView = React.createClass({
 	mixins: [ReactMeteorData],
 
 	getMeteorData() {
+		console.log(this.state.searchTerm)
 		return {
-		  projects: Meteor.user().projects()
+		  projects: Projects.search(this.state.searchTerm)
 		}
 		// var search = undefined;
 		//
@@ -17,11 +18,11 @@ ProjectsView = React.createClass({
     // }
   },
 	//
-  // getInitialState() {
-  //   return {
-  //     search: false
-  //   }
-  // },
+  getInitialState() {
+    return {
+      searchTerm: ""
+    }
+  },
 	//
 	// filterResults(){
 	// 	// Prevent default browser form submit

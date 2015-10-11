@@ -5,43 +5,48 @@ const style = {
 }
 
 ListControls = React.createClass({
-	mixins: [ReactMeteorData],
+	// mixins: [ReactMeteorData],
+  //
+	// getMeteorData() {
+	// 	var search = undefined;
+  //
+  //   if (this.state.search.allow) {
+  //     // If hide completed is checked, filter tasks
+  //     search = this.state.search.term;
+  //   }
+  //
+  //   return {
+  //     projects: Projects.search(search)
+  //   }
+  // },
 
-	getMeteorData() {
-		var search = undefined;
-
-    if (this.state.search.allow) {
-      // If hide completed is checked, filter tasks
-      search = this.state.search.term;
-    }
-
-    return {
-      projects: Projects.search(search)
-    }
-  },
-
-  getInitialState() {
-    return {
-      search: false
-    }
-  },
+  // getInitialState() {
+  //   return {
+  //     search: false
+  //   }
+  // },
 
 	filterResults() {
 		// Prevent default browser form submit
     event.preventDefault();
 
-		var search_term = React.findDOMNode(this.refs.search).value
+		var searchTerm = React.findDOMNode(this.refs.search).value
 
-		this.setState({
-      search: {allow: true, term: search_term}
-    });
+    var curState = this.props.parent.state;
+    curState.searchTerm = searchTerm;
+    this.props.parent.setState(curState);
 
-    React.findDOMNode(this.refs.search).value = '';
+		// this.setState({
+    //   search: { allow: true, term: search_term }
+    // });
+
+    // React.findDOMNode(this.refs.search).value = '';
 	},
 
   addHandler(e) {
     e.preventDefault()
 
+    // TODO: Move logic
     Projects.add({
       image:'http://fillmurray.com/300/300',
       name:'name',
@@ -52,10 +57,8 @@ ListControls = React.createClass({
 	doClear() {
 		// Prevent default browser form submit
     event.preventDefault();
-
-		this.setState({
-      search: {allow: true, term: undefined}
-    });
+    React.findDOMNode(this.refs.search).value = '';
+    this.filterResults()
 	},
 
 	render() {
@@ -68,8 +71,11 @@ ListControls = React.createClass({
             Add
           </button>
 	        <form className="unit-submit" onSubmit={this.filterResults}>
-						<input ref="search" type="text" placeholder="Filter Projects" />
-						<button onClick={this.doClear}>Clear Filter</button>
+            <div className="ui input">
+  						<input ref="search" type="text" placeholder="Filter Projects" />
+            </div>
+            <button className='ui red button' onClick={this.doClear}>Clear</button>
+            <button className='ui green button' type='submit'>Submit</button>
 				  </form>
 	      </div>
 	    )
