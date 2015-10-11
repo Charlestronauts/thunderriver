@@ -9,7 +9,7 @@ FlowRouter.triggers.enter([(context, redirect) => {
 
 FlowRouter.route('/', {
   action() {
-    ReactLayout.render(App, {content: <ProjectPage />})
+    ReactLayout.render(App, {content: <ProjectsView />})
   }
 })
 
@@ -39,6 +39,6 @@ FlowRouter.route('/project/:projectId', {
 
 FlowRouter.route('/login', {
   action() {
-    ReactLayout.render(App)
+    ReactLayout.render(App, {content: <LogIn />})
   }
 })

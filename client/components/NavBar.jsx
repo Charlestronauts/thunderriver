@@ -22,8 +22,8 @@ NavBar = React.createClass({
           <a className='ui item'>
             <i className='setting icon'></i>
           </a>
-          <LogIn />
         </div>
+        <LogInNav />
       </div>
     )
   }

@@ -16,7 +16,7 @@ MaterialList = React.createClass({
   renderMaterialItems() {
     return this.data.materials.map((materialItem) => {
       return (
-        <MaterialItem item={materialItem} />
+        <MaterialItem key={materialItem._id} item={materialItem} />
       )
     })
   },

@@ -8,7 +8,7 @@ ListControls = React.createClass({
 
   filterResults(event) {
     // Prevent default browser form submit
-    event.preventDefault();
+    event && event.preventDefault();
 
     var searchTerm = React.findDOMNode(this.refs.search).value
 
@@ -38,10 +38,8 @@ ListControls = React.createClass({
             Add
           </button>
           <form className="unit-submit" onSubmit={this.filterResults}>
-            <div className="ui input">
-              <input ref="search" type="text" placeholder="Filter Projects" />
-            </div>
-            <button className='ui red button' onClick={this.doClear}>Clear</button>
+            <input ref="search" type="text" placeholder="Filter Projects" />
+            <button className='ui red button' type='button' onClick={this.doClear}>Clear</button>
             <button className='ui green button' type='submit'>Submit</button>
           </form>
         </div>
