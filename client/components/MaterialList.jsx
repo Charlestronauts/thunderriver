@@ -1,6 +1,7 @@
 const style = {
   table: {
-    border: 'none'
+    border: 'none',
+    marginTop: 20
   },
 
   th: {
