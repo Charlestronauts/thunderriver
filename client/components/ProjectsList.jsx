@@ -1,5 +1,5 @@
-
 ProjectsList = React.createClass({
+  
   renderProjectItems() {
     return _.map(this.props.projects, (project) => {
       return <ProjectItem key={project._id} project={project} />
